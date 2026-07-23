@@ -8,8 +8,8 @@ from app.dependencies.auth import get_current_user
 from app.models.profile import UserProfile
 from app.models.triage import TriageSession
 from app.schemas.user import UserResponse
-from app.ml.predictor import triage_predictor
-from app.ml.explainer import generate_explanation
+from app.ai.ml.predictor import triage_predictor
+from app.ai.llm.explainer import generate_explanation
 from app.api.v1.triage import ML_FEATURES, CC_MAP, ONSET_MAP, PROGRESSION_MAP, PAIN_MAP
 
 router = APIRouter(prefix="/predict", tags=["ML Prediction"])

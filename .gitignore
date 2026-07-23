@@ -78,6 +78,14 @@ out/
 huggingface/
 
 # ============================
+# Machine Learning Models & Artifacts
+# ============================
+# Whitelist: Keep the production triage model files
+!backend/app/ai/ml/triage_model.joblib
+!backend/app/ai/ml/feature_names.json
+!backend/app/ai/ml/chief_complaint_encoder.json
+
+# ============================
 # Miscellaneous
 # ============================
 *.tmp

@@ -14,6 +14,9 @@ class Settings(BaseSettings):
     # Fernet field-level encryption key (32-byte url-safe base64)
     FERNET_ENCRYPTION_KEY: str = "v7bL1_j8R4X-Z9K3mP0qW5tY2uI6oO1aS4dF7gH8jK0="
 
+    # Gemini LLM
+    GEMINI_API_KEY: str = ""
+
     # PostgreSQL
     POSTGRES_USER: str = "postgres"
     POSTGRES_PASSWORD: str = "varun2425"

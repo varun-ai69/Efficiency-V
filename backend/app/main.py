@@ -50,6 +50,9 @@ app.include_router(profile_router, prefix=settings.API_V1_STR)
 from app.api.v1.triage import router as triage_router
 app.include_router(triage_router, prefix=settings.API_V1_STR)
 
+from app.api.v1.predict import router as predict_router
+app.include_router(predict_router, prefix=settings.API_V1_STR)
+
 
 # app.include_router(chat_router, prefix=settings.API_V1_STR)  ← chat baad mein
 

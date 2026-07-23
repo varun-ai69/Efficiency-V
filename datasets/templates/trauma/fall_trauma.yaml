@@ -1,0 +1,34 @@
+id: fall_trauma
+display_name: "Trauma / Fall Injury"
+category: trauma
+priority: high
+
+required_features:
+  - recent_injury
+  - pain_score
+  - bleeding
+  - loss_of_consciousness
+  - head_injury
+
+optional_features:
+  - takes_blood_thinner
+  - osteoporosis
+
+wearable_vitals:
+  required: false
+  features:
+    - heart_rate
+    - systolic_bp
+
+red_flags:
+  - severe_bleeding
+  - unconscious
+  - head_trauma_with_vomiting
+
+follow_up_questions:
+  loss_of_consciousness: "Did you pass out or black out during or right after the fall?"
+  bleeding: "Is there active bleeding from any cut or wound?"
+  head_injury: "Did you hit your head during the fall?"
+
+completion_rule:
+  minimum_required: 3

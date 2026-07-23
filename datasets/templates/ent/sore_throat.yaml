@@ -1,0 +1,31 @@
+id: sore_throat
+display_name: "Sore Throat / Pharyngitis"
+category: ent
+priority: medium
+
+required_features:
+  - symptom_duration
+  - fever_present
+  - difficulty_swallowing
+  - swollen_neck
+
+optional_features:
+  - cough
+  - recent_covid_contact
+
+wearable_vitals:
+  required: false
+  features:
+    - body_temperature
+
+red_flags:
+  - unable_to_swallow_saliva
+  - unable_to_breathe
+
+follow_up_questions:
+  difficulty_swallowing: "Is it painful or difficult to swallow liquids or food?"
+  swollen_neck: "Do you feel swollen glands or tenderness in your neck?"
+  fever_present: "Have you had a fever or chills along with your sore throat?"
+
+completion_rule:
+  minimum_required: 3

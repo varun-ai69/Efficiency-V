@@ -1,0 +1,38 @@
+id: abdominal_pain
+display_name: "Abdominal Pain / Stomach Cramps"
+category: gastrointestinal
+priority: high
+
+required_features:
+  - symptom_duration
+  - pain_score
+  - pain_type
+  - abdominal_tenderness
+  - vomiting
+  - diarrhea
+  - fever_present
+
+optional_features:
+  - pregnancy_status
+  - recent_surgery
+  - alcohol_use
+
+wearable_vitals:
+  required: false
+  features:
+    - body_temperature
+    - heart_rate
+    - systolic_bp
+
+red_flags:
+  - severe_bleeding
+  - bloody_vomit
+  - rigid_abdomen
+
+follow_up_questions:
+  pain_type: "Where is the pain located and how does it feel (sharp, cramping, burning)?"
+  abdominal_tenderness: "Is your stomach tender or painful to press on?"
+  vomiting: "Have you been throwing up or unable to keep fluids down?"
+
+completion_rule:
+  minimum_required: 4

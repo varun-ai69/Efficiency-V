@@ -1,0 +1,36 @@
+id: diarrhea
+display_name: "Diarrhea / Gastroenteritis"
+category: gastrointestinal
+priority: medium
+
+required_features:
+  - symptom_duration
+  - diarrhea
+  - bloody_stool
+  - abdominal_tenderness
+  - fever_present
+  - dizziness
+
+optional_features:
+  - recent_travel
+  - food_poisoning_suspicion
+
+wearable_vitals:
+  required: false
+  features:
+    - body_temperature
+    - heart_rate
+    - systolic_bp
+
+red_flags:
+  - bloody_stool
+  - severe_dehydration
+  - high_fever
+
+follow_up_questions:
+  bloody_stool: "Is there visible blood or dark tarry material in your stool?"
+  diarrhea: "How many loose or watery bowel movements have you had today?"
+  dizziness: "Do you feel lightheaded, weak, or thirsty when standing?"
+
+completion_rule:
+  minimum_required: 3

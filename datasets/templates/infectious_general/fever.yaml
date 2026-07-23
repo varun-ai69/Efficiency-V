@@ -1,0 +1,39 @@
+id: fever
+display_name: "Fever / Chills"
+category: infectious_general
+priority: medium
+
+required_features:
+  - symptom_duration
+  - body_temperature
+  - body_aches
+  - cough
+  - shortness_of_breath
+  - rash
+
+optional_features:
+  - recent_travel
+  - covid_contact
+  - tick_bite
+  - animal_bite
+
+wearable_vitals:
+  required: false
+  features:
+    - body_temperature
+    - heart_rate
+    - spo2
+
+red_flags:
+  - confusion
+  - seizure_active
+  - severe_shortness_of_breath
+  - spo2 < 90
+
+follow_up_questions:
+  body_temperature: "What was your highest measured temperature (if taken with a thermometer)?"
+  body_aches: "Are you experiencing muscle aches, severe chills, or shivering?"
+  shortness_of_breath: "Are you feeling short of breath along with your fever?"
+
+completion_rule:
+  minimum_required: 3

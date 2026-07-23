@@ -1,0 +1,33 @@
+id: urinary_symptoms
+display_name: "Urinary Symptoms (UTI / Dysuria)"
+category: genitourinary
+priority: medium
+
+required_features:
+  - burning_urination
+  - urinary_frequency
+  - fever_present
+  - abdominal_tenderness
+  - flank_pain
+
+optional_features:
+  - pregnancy_status
+  - diabetes
+  - recurrent_uti
+
+wearable_vitals:
+  required: false
+  features:
+    - body_temperature
+
+red_flags:
+  - unable_to_urinate
+  - severe_flank_pain
+
+follow_up_questions:
+  burning_urination: "Do you experience pain or burning when urinating?"
+  urinary_frequency: "Are you feeling an urgent need to urinate much more often than usual?"
+  flank_pain: "Do you have pain in your lower back or side (flank area)?"
+
+completion_rule:
+  minimum_required: 3

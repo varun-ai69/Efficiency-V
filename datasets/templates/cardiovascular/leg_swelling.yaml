@@ -1,0 +1,34 @@
+id: leg_swelling
+display_name: "Leg Swelling / Edema"
+category: cardiovascular
+priority: medium
+
+required_features:
+  - leg_swelling
+  - pain_score
+  - breathing_difficulty
+  - one_sided_swelling
+
+optional_features:
+  - heart_disease
+  - previous_dvt
+  - recent_surgery
+  - long_travel
+
+wearable_vitals:
+  required: false
+  features:
+    - heart_rate
+    - spo2
+
+red_flags:
+  - chest_pain
+  - sudden_shortness_of_breath
+
+follow_up_questions:
+  one_sided_swelling: "Is the swelling in only one leg, or both legs?"
+  pain_score: "Is your calf or leg painful or tender to touch?"
+  breathing_difficulty: "Are you also experiencing sudden shortness of breath?"
+
+completion_rule:
+  minimum_required: 3

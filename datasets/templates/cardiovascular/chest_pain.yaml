@@ -1,0 +1,41 @@
+id: chest_pain
+display_name: "Chest Pain / Tightness"
+category: cardiovascular
+priority: high
+
+required_features:
+  - symptom_duration
+  - pain_score
+  - pain_type
+  - radiating_pain
+  - chest_tightness
+  - breathing_difficulty
+
+optional_features:
+  - smoker
+  - diabetes
+  - hypertension
+  - takes_blood_thinner
+  - takes_antihypertensive
+
+wearable_vitals:
+  required: false
+  features:
+    - heart_rate
+    - systolic_bp
+    - diastolic_bp
+    - spo2
+
+red_flags:
+  - severe_shortness_of_breath
+  - unconscious
+  - cyanosis
+
+follow_up_questions:
+  radiating_pain: "Does the pain spread to your left arm, jaw, neck, or back?"
+  chest_tightness: "Does your chest feel tight, heavy, or like a crushing pressure?"
+  pain_type: "How would you describe the pain (sharp, crushing, burning, pressure, stabbing)?"
+  breathing_difficulty: "Are you finding it hard to catch your breath while resting?"
+
+completion_rule:
+  minimum_required: 4

@@ -1,0 +1,38 @@
+id: palpitations
+display_name: "Palpitations / Rapid Heartbeat"
+category: cardiovascular
+priority: medium
+
+required_features:
+  - symptom_duration
+  - symptom_onset
+  - intermittent
+  - dizziness
+  - shortness_of_breath
+
+optional_features:
+  - heart_disease
+  - hypertension
+  - anxiety
+  - caffeine_intake
+  - takes_cardiovascular_meds
+
+wearable_vitals:
+  required: false
+  features:
+    - heart_rate
+    - systolic_bp
+    - spo2
+
+red_flags:
+  - syncope
+  - severe_chest_pain
+  - unconscious
+
+follow_up_questions:
+  symptom_onset: "Did the racing heart start suddenly or gradually?"
+  intermittent: "Does it come and go in episodes, or is it continuous?"
+  dizziness: "Are you feeling lightheaded, dizzy, or faint right now?"
+
+completion_rule:
+  minimum_required: 3

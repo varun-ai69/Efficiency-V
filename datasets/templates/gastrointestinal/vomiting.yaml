@@ -1,0 +1,37 @@
+id: vomiting
+display_name: "Nausea & Vomiting"
+category: gastrointestinal
+priority: medium
+
+required_features:
+  - symptom_duration
+  - vomiting
+  - bloody_vomit
+  - inability_to_keep_fluids
+  - dizziness
+  - fever_present
+
+optional_features:
+  - pregnancy_status
+  - food_poisoning_suspicion
+  - recent_travel
+
+wearable_vitals:
+  required: false
+  features:
+    - heart_rate
+    - body_temperature
+    - systolic_bp
+
+red_flags:
+  - bloody_vomit
+  - severe_dehydration
+  - unconscious
+
+follow_up_questions:
+  bloody_vomit: "Is there any blood or coffee-ground material in your vomit?"
+  inability_to_keep_fluids: "Have you been unable to keep any liquids down for more than 12 hours?"
+  dizziness: "Do you feel dizzy or lightheaded when standing up?"
+
+completion_rule:
+  minimum_required: 3

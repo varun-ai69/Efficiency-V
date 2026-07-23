@@ -1,0 +1,22 @@
+{
+  "abdominal_pain": 0,
+  "allergic_reaction": 1,
+  "back_pain": 2,
+  "chest_pain": 3,
+  "cough": 4,
+  "diarrhea": 5,
+  "dizziness": 6,
+  "fall_trauma": 7,
+  "fever": 8,
+  "headache": 9,
+  "leg_swelling": 10,
+  "palpitations": 11,
+  "rash": 12,
+  "seizure": 13,
+  "shortness_of_breath": 14,
+  "sore_throat": 15,
+  "stroke_symptoms": 16,
+  "syncope": 17,
+  "urinary_symptoms": 18,
+  "vomiting": 19
+}

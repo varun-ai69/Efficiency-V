@@ -1,0 +1,36 @@
+id: syncope
+display_name: "Syncope / Fainting / Blackout"
+category: neurological
+priority: high
+
+required_features:
+  - loss_of_consciousness
+  - symptom_onset
+  - dizziness
+  - palpitations
+  - chest_pain
+
+optional_features:
+  - heart_disease
+  - dehydration
+  - anemia
+
+wearable_vitals:
+  required: false
+  features:
+    - heart_rate
+    - systolic_bp
+    - spo2
+
+red_flags:
+  - seizure_active
+  - chest_pain
+  - sudden_onset_exercise
+
+follow_up_questions:
+  loss_of_consciousness: "Did you completely lose consciousness, and for how long?"
+  dizziness: "Did you feel lightheaded, nauseous, or sweaty right before fainting?"
+  chest_pain: "Did you have any chest pain or racing heart before passing out?"
+
+completion_rule:
+  minimum_required: 3

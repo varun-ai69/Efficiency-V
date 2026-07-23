@@ -1,0 +1,126 @@
+# ============================
+# Python
+# ============================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+wheels/
+pip-wheel-metadata/
+*.manifest
+*.spec
+
+# ============================
+# Virtual Environments
+# ============================
+venv/
+.venv/
+env/
+ENV/
+.env/
+
+# ============================
+# Environment Variables (SECRETS)
+# ============================
+.env
+*.env
+.env.*
+!.env.example
+
+# ============================
+# IDEs & Editors
+# ============================
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.swp
+.DS_Store
+Thumbs.db
+
+# ============================
+# Jupyter Notebooks
+# ============================
+.ipynb_checkpoints/
+*.ipynb
+
+# ============================
+# Machine Learning Models & Artifacts
+# ============================
+*.pkl
+*.pickle
+*.joblib
+*.h5
+*.hdf5
+*.pb
+*.pt
+*.pth
+*.onnx
+*.bin
+*.safetensors
+models/
+model_artifacts/
+
+# HuggingFace / SentenceTransformer cached models
+.cache/
+huggingface/
+
+# FAISS index files
+*.faiss
+*.index
+
+# ============================
+# Datasets (large files)
+# ============================
+datasets/raw/
+datasets/processed/
+*.csv
+*.parquet
+*.arrow
+*.json.gz
+
+# Keep these dataset files:
+!datasets/templates/**
+
+# ============================
+# Logs
+# ============================
+*.log
+logs/
+
+# ============================
+# Testing
+# ============================
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+
+# ============================
+# Node / Frontend (for later)
+# ============================
+node_modules/
+.next/
+.nuxt/
+dist/
+out/
+.turbo/
+
+# ============================
+# Miscellaneous
+# ============================
+*.tmp
+*.temp
+*.bak

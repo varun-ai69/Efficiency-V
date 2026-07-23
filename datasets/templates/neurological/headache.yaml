@@ -1,0 +1,40 @@
+id: headache
+display_name: "Headache / Migraine"
+category: neurological
+priority: medium
+
+required_features:
+  - symptom_duration
+  - pain_score
+  - symptom_onset
+  - neck_stiffness
+  - vision_changes
+  - light_sensitivity
+  - vomiting
+
+optional_features:
+  - hypertension
+  - previous_migraine
+  - fever
+
+wearable_vitals:
+  required: false
+  features:
+    - systolic_bp
+    - body_temperature
+
+red_flags:
+  - sudden_onset
+  - neck_stiffness
+  - vision_changes
+  - seizure_active
+  - unconscious
+
+follow_up_questions:
+  symptom_onset: "Did the headache reach peak intensity instantly ('thunderclap') or build up gradually?"
+  neck_stiffness: "Is your neck stiff to the point where touching your chin to your chest hurts?"
+  vision_changes: "Are you experiencing double vision, blurred vision, or loss of sight?"
+  light_sensitivity: "Are bright lights causing discomfort or worsening your pain?"
+
+completion_rule:
+  minimum_required: 4

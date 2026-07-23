@@ -1,0 +1,107 @@
+# ==============================================================================
+# CANONICAL AI TRIAGE SYSTEM CONFIGURATION (PRODUCTION ARCHITECTURE)
+# ==============================================================================
+# Architecture Design:
+# 1. Red Flags Safety Layer: Hard rules that trigger Immediate Emergency (Bypasses ML)
+# 2. Canonical Core Vector: ~30 universal features (Profile, Medical History, Core Vitals)
+# 3. Chief Complaint NLU: ID + Confidence score + Raw text from FAISS
+# 4. Dynamic Complaint Templates: Declares required vs optional features per symptom
+# ==============================================================================
+
+# Targets (ML Decision Output)
+target:
+  - triage_target       # Immediate | Consult | Home Care
+  - esi                 # Emergency Severity Index (1-5)
+
+# Safety Layer: Red Flags (Emergency Bypass Rules)
+red_flags:
+  - unconscious
+  - unable_to_speak
+  - severe_bleeding
+  - seizure_active
+  - cyanosis
+  - severe_shortness_of_breath
+
+# Section 1: Canonical User Profile (Stored in DB upon signup)
+user_profile:
+  - age
+  - gender
+  - bmi                 # Computed: weight_kg / (height_m ** 2)
+  - smoker
+  - alcohol_use
+  - pregnancy_status
+  - diabetes
+  - hypertension
+  - asthma
+  - copd
+  - heart_disease
+  - kidney_disease
+  - liver_disease
+  - previous_stroke
+  - epilepsy
+  - cancer
+  - has_allergy
+  - drug_allergy
+  - food_allergy
+  - previous_ed_visits
+
+# Section 2: Structured Medication Categories
+medication_categories:
+  - takes_antihypertensive
+  - takes_diabetes_medicine
+  - takes_blood_thinner
+  - takes_steroids
+  - takes_inhaler
+
+# Section 3: Universal Symptom Features (Asked across most complaints)
+universal_symptoms:
+  - symptom_onset       # sudden | acute | gradual
+  - progression         # better | same | worse
+  - pain_type           # sharp | burning | crushing | stabbing | pressure
+  - symptom_duration
+  - symptom_severity    # Scale 1-10
+  - pain_score          # Scale 1-10
+  - intermittent        # True/False
+  - relieved_by_rest    # True/False
+
+# Section 4: Home Vitals & Measurements (Smartwatch / Self-Reported)
+home_vitals:
+  - heart_rate
+  - systolic_bp
+  - diastolic_bp
+  - respiratory_rate
+  - body_temperature
+  - spo2
+
+# Section 5: Environmental & Special Risk Factors
+environmental_risks:
+  - recent_travel
+  - recent_surgery
+  - covid_contact
+  - animal_bite
+  - tick_bite
+
+# Section 6: NLU Chief Complaint Payload Structure
+chief_complaint_nlu:
+  fields:
+    - id                # Matched CC Template (e.g. Chest Pain, Headache)
+    - confidence        # FAISS Cosine Similarity / Match Score (e.g. 0.96)
+    - original_text     # Raw user utterance ("My chest feels tight")
+
+# Section 7: Dynamic Feature Pool (Required conditionally by CC Templates)
+dynamic_feature_pool:
+  - radiating_pain
+  - chest_tightness
+  - neck_stiffness
+  - light_sensitivity
+  - persistent_cough
+  - bloody_cough
+  - body_aches
+  - abdominal_tenderness
+  - diarrhea
+  - burning_urination
+  - urinary_frequency
+  - leg_swelling
+  - palpitations
+  - vision_changes
+  - recent_injury

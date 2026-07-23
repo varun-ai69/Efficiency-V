@@ -1,0 +1,33 @@
+id: rash
+display_name: "Rash / Skin Lesions"
+category: dermatology
+priority: low
+
+required_features:
+  - rash
+  - fever_present
+  - itching
+  - spreading_rapidly
+
+optional_features:
+  - allergy
+  - new_medication
+  - tick_bite
+
+wearable_vitals:
+  required: false
+  features:
+    - body_temperature
+
+red_flags:
+  - facial_swelling
+  - breathing_difficulty
+  - purple_non_blanching_spots
+
+follow_up_questions:
+  rash: "Where is the rash located and does it itch or hurt?"
+  spreading_rapidly: "Is the rash spreading rapidly over your body?"
+  new_medication: "Did you start any new medication in the last 2 weeks?"
+
+completion_rule:
+  minimum_required: 3

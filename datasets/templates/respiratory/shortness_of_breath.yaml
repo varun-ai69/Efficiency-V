@@ -1,0 +1,40 @@
+id: shortness_of_breath
+display_name: "Shortness of Breath / Dyspnea"
+category: respiratory
+priority: high
+
+required_features:
+  - symptom_duration
+  - symptom_severity
+  - symptom_onset
+  - persistent_cough
+  - wheezing
+  - chest_tightness
+
+optional_features:
+  - asthma
+  - copd
+  - smoker
+  - takes_inhaler
+  - recent_infection
+
+wearable_vitals:
+  required: false
+  features:
+    - spo2
+    - respiratory_rate
+    - heart_rate
+
+red_flags:
+  - cyanosis
+  - unable_to_speak
+  - severe_shortness_of_breath
+  - spo2 < 90
+
+follow_up_questions:
+  symptom_severity: "On a scale of 1-10, how severe is your breathing difficulty?"
+  wheezing: "Do you hear a whistling or wheezing sound when breathing out?"
+  persistent_cough: "Have you also had a cough along with shortness of breath?"
+
+completion_rule:
+  minimum_required: 4

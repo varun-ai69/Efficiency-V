@@ -1,0 +1,33 @@
+id: back_pain
+display_name: "Back Pain / Lumbar Strain"
+category: musculoskeletal
+priority: medium
+
+required_features:
+  - pain_score
+  - symptom_duration
+  - recent_injury
+  - leg_weakness
+  - numbness
+
+optional_features:
+  - previous_back_pain
+  - arthritis
+
+wearable_vitals:
+  required: false
+  features:
+    - heart_rate
+
+red_flags:
+  - loss_of_bladder_control
+  - weakness_both_legs
+  - fever_with_back_pain
+
+follow_up_questions:
+  pain_score: "On a scale of 1-10, how severe is your back pain?"
+  recent_injury: "Did the back pain start after a heavy lift, fall, or sudden movement?"
+  leg_weakness: "Are you feeling weakness, numbness, or tingling shooting down your legs?"
+
+completion_rule:
+  minimum_required: 3

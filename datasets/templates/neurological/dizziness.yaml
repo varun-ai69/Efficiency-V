@@ -1,0 +1,39 @@
+id: dizziness
+display_name: "Dizziness / Lightheadedness / Vertigo"
+category: neurological
+priority: medium
+
+required_features:
+  - symptom_duration
+  - symptom_onset
+  - loss_of_consciousness
+  - vision_changes
+  - confusion
+  - room_spinning
+
+optional_features:
+  - hypertension
+  - diabetes
+  - anemia
+  - dehydration
+
+wearable_vitals:
+  required: false
+  features:
+    - heart_rate
+    - systolic_bp
+    - diastolic_bp
+
+red_flags:
+  - syncope
+  - confusion
+  - slurred_speech
+  - weakness_one_side
+
+follow_up_questions:
+  room_spinning: "Does it feel like you are spinning or the room is spinning around you (vertigo)?"
+  loss_of_consciousness: "Did you pass out, faint, or lose consciousness at any point?"
+  vision_changes: "Are you seeing double or experiencing darkness/blurriness when standing?"
+
+completion_rule:
+  minimum_required: 3

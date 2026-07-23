@@ -1,0 +1,35 @@
+id: seizure
+display_name: "Seizure / Convulsions / Blackout"
+category: neurological
+priority: high
+
+required_features:
+  - symptom_duration
+  - seizure_active
+  - loss_of_consciousness
+  - post_ictal_confusion
+  - recent_head_injury
+
+optional_features:
+  - epilepsy
+  - takes_epilepsy_meds
+  - alcohol_withdrawal
+
+wearable_vitals:
+  required: false
+  features:
+    - heart_rate
+    - spo2
+
+red_flags:
+  - seizure_active
+  - unconscious
+  - unable_to_speak
+
+follow_up_questions:
+  seizure_active: "Is the person still actively shaking or having a seizure right now?"
+  loss_of_consciousness: "Did the person lose consciousness during the event?"
+  post_ictal_confusion: "Is the person currently confused or difficult to wake up after the seizure?"
+
+completion_rule:
+  minimum_required: 3

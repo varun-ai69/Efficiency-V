@@ -1,0 +1,35 @@
+id: allergic_reaction
+display_name: "Allergic Reaction / Anaphylaxis Risk"
+category: immunology
+priority: high
+
+required_features:
+  - rash
+  - facial_swelling
+  - breathing_difficulty
+  - throat_tightness
+  - new_exposure
+
+optional_features:
+  - known_allergy
+  - epipen_available
+
+wearable_vitals:
+  required: false
+  features:
+    - heart_rate
+    - spo2
+    - systolic_bp
+
+red_flags:
+  - unable_to_breathe
+  - tongue_swelling
+  - throat_closing
+
+follow_up_questions:
+  facial_swelling: "Is there swelling in your lips, tongue, face, or throat?"
+  breathing_difficulty: "Are you wheezing or struggling to breathe?"
+  new_exposure: "Were you recently exposed to a known allergen, new food, medication, or insect sting?"
+
+completion_rule:
+  minimum_required: 3

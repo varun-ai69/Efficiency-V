@@ -1,0 +1,92 @@
+{
+  "target": [
+    "triage_target",
+    "esi"
+  ],
+  "red_flags": [
+    "unconscious",
+    "unable_to_speak",
+    "severe_bleeding",
+    "seizure_active",
+    "cyanosis",
+    "severe_shortness_of_breath"
+  ],
+  "user_profile": [
+    "age",
+    "gender",
+    "bmi",
+    "smoker",
+    "alcohol_use",
+    "pregnancy_status",
+    "diabetes",
+    "hypertension",
+    "asthma",
+    "copd",
+    "heart_disease",
+    "kidney_disease",
+    "liver_disease",
+    "previous_stroke",
+    "epilepsy",
+    "cancer",
+    "has_allergy",
+    "drug_allergy",
+    "food_allergy",
+    "previous_ed_visits"
+  ],
+  "medication_categories": [
+    "takes_antihypertensive",
+    "takes_diabetes_medicine",
+    "takes_blood_thinner",
+    "takes_steroids",
+    "takes_inhaler"
+  ],
+  "universal_symptoms": [
+    "symptom_onset",
+    "progression",
+    "pain_type",
+    "symptom_duration",
+    "symptom_severity",
+    "pain_score",
+    "intermittent",
+    "relieved_by_rest"
+  ],
+  "home_vitals": [
+    "heart_rate",
+    "systolic_bp",
+    "diastolic_bp",
+    "respiratory_rate",
+    "body_temperature",
+    "spo2"
+  ],
+  "environmental_risks": [
+    "recent_travel",
+    "recent_surgery",
+    "covid_contact",
+    "animal_bite",
+    "tick_bite"
+  ],
+  "chief_complaint_nlu": {
+    "fields": [
+      "id",
+      "confidence",
+      "original_text"
+    ]
+  },
+  "dynamic_feature_pool": [
+    "radiating_pain",
+    "chest_tightness",
+    "neck_stiffness",
+    "light_sensitivity",
+    "persistent_cough",
+    "bloody_cough",
+    "body_aches",
+    "abdominal_tenderness",
+    "diarrhea",
+    "burning_urination",
+    "urinary_frequency",
+    "leg_swelling",
+    "palpitations",
+    "vision_changes",
+    "recent_injury"
+  ]
+}

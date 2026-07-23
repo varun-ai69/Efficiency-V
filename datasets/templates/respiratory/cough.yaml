@@ -1,0 +1,35 @@
+id: cough
+display_name: "Cough (Dry or Productive)"
+category: respiratory
+priority: medium
+
+required_features:
+  - symptom_duration
+  - bloody_cough
+  - fever_present
+  - breathing_difficulty
+  - chest_pain
+
+optional_features:
+  - asthma
+  - smoker
+  - recent_travel
+  - covid_contact
+
+wearable_vitals:
+  required: false
+  features:
+    - body_temperature
+    - spo2
+
+red_flags:
+  - bloody_cough
+  - severe_shortness_of_breath
+
+follow_up_questions:
+  bloody_cough: "Are you coughing up any blood or rust-colored phlegm?"
+  fever_present: "Have you noticed chills or felt warm/feverish?"
+  breathing_difficulty: "Does coughing make it hard to catch your breath?"
+
+completion_rule:
+  minimum_required: 3

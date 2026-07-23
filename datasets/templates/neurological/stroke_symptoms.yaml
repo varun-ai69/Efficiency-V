@@ -1,0 +1,37 @@
+id: stroke_symptoms
+display_name: "Stroke Symptoms (FAST Alert)"
+category: neurological
+priority: critical
+
+required_features:
+  - weakness_one_side
+  - slurred_speech
+  - vision_changes
+  - facial_droop
+  - symptom_onset
+
+optional_features:
+  - hypertension
+  - diabetes
+  - previous_stroke
+
+wearable_vitals:
+  required: false
+  features:
+    - systolic_bp
+    - diastolic_bp
+    - heart_rate
+
+red_flags:
+  - fast_positive
+  - sudden_onset
+  - unconscious
+  - inability_to_speak
+
+follow_up_questions:
+  weakness_one_side: "Are you experiencing weakness or numbness on one side of your face, arm, or leg?"
+  slurred_speech: "Are you having trouble speaking clearly or understanding others?"
+  facial_droop: "Is one side of your face drooping when you try to smile?"
+
+completion_rule:
+  minimum_required: 3

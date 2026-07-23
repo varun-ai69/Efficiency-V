@@ -16,8 +16,6 @@ var/
 sdist/
 wheels/
 pip-wheel-metadata/
-*.manifest
-*.spec
 
 # ============================
 # Virtual Environments
@@ -29,7 +27,7 @@ ENV/
 .env/
 
 # ============================
-# Environment Variables (SECRETS)
+# Environment Variables (SECRETS - Never push these!)
 # ============================
 .env
 *.env
@@ -51,50 +49,6 @@ ENV/
 Thumbs.db
 
 # ============================
-# Jupyter Notebooks
-# ============================
-.ipynb_checkpoints/
-*.ipynb
-
-# ============================
-# Machine Learning Models & Artifacts
-# ============================
-*.pkl
-*.pickle
-*.joblib
-*.h5
-*.hdf5
-*.pb
-*.pt
-*.pth
-*.onnx
-*.bin
-*.safetensors
-models/
-model_artifacts/
-
-# HuggingFace / SentenceTransformer cached models
-.cache/
-huggingface/
-
-# FAISS index files
-*.faiss
-*.index
-
-# ============================
-# Datasets (large files)
-# ============================
-datasets/raw/
-datasets/processed/
-*.csv
-*.parquet
-*.arrow
-*.json.gz
-
-# Keep these dataset files:
-!datasets/templates/**
-
-# ============================
 # Logs
 # ============================
 *.log
@@ -114,9 +68,14 @@ coverage.xml
 node_modules/
 .next/
 .nuxt/
-dist/
 out/
 .turbo/
+
+# ============================
+# HuggingFace / SentenceTransformer download cache
+# ============================
+.cache/
+huggingface/
 
 # ============================
 # Miscellaneous

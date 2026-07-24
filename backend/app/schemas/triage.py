@@ -23,3 +23,12 @@ class TriageVectorResponse(BaseModel):
     vector: List[Any]
     feature_names: List[str]
     message: str
+
+class TriageSessionHistory(BaseModel):
+    id: int
+    original_text: str
+    status: str
+    created_at: datetime
+    
+    class Config:
+        from_attributes = True

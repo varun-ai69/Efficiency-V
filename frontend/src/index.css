@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-50: #ecfdf5;  
+  --color-brand-100: #d1fae5; 
+  --color-brand-500: #10b981; 
+  --color-brand-600: #059669; 
+  --color-brand-700: #047857; 
+  --color-brand-900: #064e3b; 
+  
+  /* Remove border radius universally for the minimalist sharp aesthetic */
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+  --radius-xl: 0;
+  --radius-2xl: 0;
+  --radius-3xl: 0;
+  --radius-full: 0;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-50 text-slate-900 font-sans antialiased selection:bg-brand-500 selection:text-white;
+  }
+}

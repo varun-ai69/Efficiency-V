@@ -10,10 +10,21 @@ from app.models.user import User
 from app.models.profile import UserProfile
 from app.models.triage import TriageSession
 from app.schemas.user import UserResponse
-from app.schemas.triage import TriageStartRequest, TriageAnswerRequest, TriageChatResponse, TriageVectorResponse
+from app.schemas.triage import TriageStartRequest, TriageAnswerRequest, TriageChatResponse, TriageVectorResponse, TriageSessionHistory
 from app.ai.embedding.engine import embedding_engine
 
 router = APIRouter(prefix="/triage", tags=["Triage Chat"])
+
+@router.get("/history", response_model=List[TriageSessionHistory])
+async def get_triage_history(
+    current_user: UserResponse = Depends(get_current_user),
+    db: AsyncSession = Depends(get_db)
+):
+    """Fetch all past triage sessions for the current user."""
+    stmt = select(TriageSession).where(TriageSession.user_id == current_user.id).order_by(TriageSession.created_at.desc())
+    result = await db.execute(stmt)
+    sessions = result.scalars().all()
+    return sessions
 
 # The full list of 62 features the ML model expects for prediction
 ML_FEATURES = [

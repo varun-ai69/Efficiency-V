@@ -6,6 +6,7 @@ import { OnboardingWizard } from './pages/OnboardingWizard';
 import { Dashboard } from './pages/Dashboard';
 import { Welcome } from './pages/Welcome';
 import { TriageChat } from './pages/TriageChat';
+import { ChronicCompanion } from './pages/ChronicCompanion';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(!!localStorage.getItem('token'));
@@ -34,6 +35,7 @@ function App() {
         
         {/* Modules */}
         <Route path="/triage" element={isAuthenticated ? <TriageChat /> : <Navigate to="/login" />} />
+        <Route path="/chronic-companion" element={isAuthenticated ? <ChronicCompanion /> : <Navigate to="/login" />} />
       </Routes>
     </div>
   );

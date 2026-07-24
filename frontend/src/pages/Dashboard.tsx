@@ -81,7 +81,10 @@ export const Dashboard = () => {
           </div>
 
           {/* Chronic Module Card */}
-          <div className="bg-white border border-brand-100 p-8 hover:shadow-md transition-shadow group cursor-pointer">
+          <div 
+            onClick={() => navigate('/chronic-companion')}
+            className="bg-white border border-brand-100 p-8 hover:shadow-md transition-shadow group cursor-pointer"
+          >
             <div className="w-12 h-12 bg-brand-50 flex items-center justify-center mb-6 group-hover:bg-brand-100 transition-colors">
               <Activity className="w-6 h-6 text-brand-600" />
             </div>
